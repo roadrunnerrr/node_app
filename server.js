@@ -39,12 +39,8 @@ app.get('/get-containers/:id', (request, response) => {
 });
 
 /* ROUTE */
-router.get('/',function(req,res){
-    res.sendFile('/index.html');
-});
-
-router.get('/container/:id',function(req,res){
-    res.sendFile('/index.html');
+router.get('*',function(req,res){
+    res.sendFile(path + 'index.html');
 });
 
 app.use(express.static(path));
